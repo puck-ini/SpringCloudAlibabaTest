@@ -1,0 +1,8 @@
+server:
+  port: 9001 #consumer服务端口为9001；
+spring:
+  application:
+    name: consumer #服务名称为consumer
+  cloud:
+    nacos:
+      server-addr: localhost:8848 #指定Nacos注册中心的地址

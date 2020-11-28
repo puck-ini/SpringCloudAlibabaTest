@@ -1,0 +1,8 @@
+server:
+  port: 8001 #provider服务端口为8001；
+spring:
+  application:
+    name: provider #服务名称为provider
+  cloud:
+    nacos:
+      server-addr: localhost:8848 #指定Nacos注册中心的地址

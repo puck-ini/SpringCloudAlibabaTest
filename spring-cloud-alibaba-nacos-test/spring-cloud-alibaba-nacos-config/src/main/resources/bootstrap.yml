@@ -1,0 +1,27 @@
+server:
+  port: 8800
+spring:
+  application:
+    name: config-center
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848 #Nacos配置中心的地址
+#        file-extension: yaml #Nacos配置中心读取的配置的格式为yaml格式
+#        prefix: test
+#        namespace: '2cc5d684-cdb4-4a2d-9b10-60147b0aea2d'
+#        group: group_test
+        # 获取多个配置
+        extension-configs:
+          - dataId: config-a.yaml
+            group: DEFAULT_GROUP
+            refresh: true #是否刷新配置
+          - dataId: config-b.yaml
+            group: DEFAULT_GROUP
+            refresh: false
+        #多个配置共享
+#        shared-configs: config-a.yaml,config-b.yaml
+  profiles:
+    active: dev
+
+

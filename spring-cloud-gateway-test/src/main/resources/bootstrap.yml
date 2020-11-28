@@ -1,0 +1,11 @@
+# 配置文件：{application.name-profiles.active.file-extension} gateway-test-dev.yml
+spring:
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+        server-addr: localhost:8848
+  application:
+    name: gateway-test
+  profiles:
+    active: dev
